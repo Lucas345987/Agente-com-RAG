@@ -47,6 +47,6 @@ if __name__ == "__main__":
         skip_if_exists=True,
         reader=pdf_reader,
     )
-    agent_os.serve(app="api_agent:app",reload=True)
+    agent_os.serve(app="api_agent:app",host="0.0.0.0",port=10000,reload=True)
 
     
