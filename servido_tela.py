@@ -7,7 +7,7 @@ import streamlit as st
 
 
 AGENT_ID="Agents_de_SMC"
-ENDPOINT = f"http://localhost:7777/agents/{AGENT_ID}/runs"
+ENDPOINT = f"https://agente-com-rag.onrender.com/agents/{AGENT_ID}/runs"
 
 def get_response_stream(message: str):
     response = requests.post(
