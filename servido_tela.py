@@ -70,7 +70,7 @@ if prompt := st.chat_input("Digite sua mensagem!"):
                 response_placerholder.markdown(full_response + "")
     
     response_placerholder.markdown(full_response)
-    # Salvar a resposta do assistente (full_response) e o histórico na session_state
+    
     st.session_state.messages.append({
         "role": "assistant",
         "content": full_response,
@@ -79,56 +79,3 @@ if prompt := st.chat_input("Digite sua mensagem!"):
 
 
 
-
-# def get_streaming_response(message: str):
-#     for event in get_response_stream(message):
-#         event_type = event.get("event", "")
-
-#         if event_type== "RunStarted":
-#             print("Execução iniciada!")
-#             print("-"*50)
-        
-#         elif event_type == "RunContent":
-#             content = event.get("content", "")
-#             if content:
-#                 print(content, end="", flush=True)
-        
-#         elif event_type == "ToolCallStarted":
-#             tool = event.get("tool",{})
-#             tool_name = tool.get("tool_name", "Unknown")
-#             tool_args = tool.get("tool_args", {})
-#             print(f"TOOL INICIADA:{tool_name}")
-#             print(f"ARGUMENTOS:{json.dumps(tool_args, indent=2)}")
-
-#             print("_"*50)
-
-#         elif event_type == "RunCompleted":
-#             print("Execução Concluida!")
-#             metrics = event.get("metrics", {})
-#             if metrics:
-#                 print(f"METRICAR: {json.dumps("metrics", indent=2)}")
-#                 print("_"*50)
-
-
-
-
-# if __name__ == "__main__":
-#     message = input("Digite uma mensagem!")
-#     get_streaming_response(message)
-#     # while True:
-#     #     message = input("Digite uma mensagem!")
-#     #     get_streaming_response(message)
-
-
-# """
-# RunStarted
-# RunContent
-# ToolCallStarted
-# ToolCallCompleted
-# RunContent
-# RunContentCompleted
-# MemoryUpdateStarted
-# MemoryUpdateCompleted
-# RunCompleted
-
-# """
