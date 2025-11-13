@@ -31,9 +31,9 @@ def get_response_stream(message: str):
 
 
 
-st.set_page_config(page_title="Agente SMC")
+st.set_page_config(page_title="Agente RAG")
 
-st.title("Chat Smart Money Concpts")
+st.title("Agente de ia com RAG")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
